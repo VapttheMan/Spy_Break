@@ -35,7 +35,7 @@ func _physics_process(delta):
 		elif can_move:
 			player_movement(delta)
 	
-	if Input.is_action_just_pressed("ui_restart"):
+	if can_move and Input.is_action_just_pressed("ui_restart"):
 		timer_death.start()
 	
 	if has_gun == true and Input.is_action_just_pressed("ui_roll"):
