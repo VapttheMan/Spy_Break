@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cebd1hnr55yq4"]
+[gd_scene load_steps=8 format=3 uid="uid://cebd1hnr55yq4"]
 
+[ext_resource type="Script" path="res://Scenes/Levels/level_setup.gd" id="1_2dnmk"]
 [ext_resource type="PackedScene" uid="uid://b4jhjuk68nvxn" path="res://Scenes/player.tscn" id="1_fydxe"]
 [ext_resource type="PackedScene" uid="uid://ch37ai5i4wte7" path="res://Scenes/enemy.tscn" id="2_5f4u1"]
 [ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="3_0igcb"]
@@ -15,6 +16,7 @@ point_count = 3
 [node name="Level_1" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(0, -1)
+script = ExtResource("1_2dnmk")
 
 [node name="Player" parent="." instance=ExtResource("1_fydxe")]
 position = Vector2(-130, 2)

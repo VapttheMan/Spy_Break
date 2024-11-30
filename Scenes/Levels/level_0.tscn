@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://0qb6k3k5vycq"]
+[gd_scene load_steps=6 format=3 uid="uid://0qb6k3k5vycq"]
 
 [ext_resource type="PackedScene" uid="uid://b4jhjuk68nvxn" path="res://Scenes/player.tscn" id="1_2aad8"]
+[ext_resource type="Script" path="res://Scenes/Levels/level_setup.gd" id="1_tg8uc"]
 [ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="2_rhy4q"]
 [ext_resource type="FontFile" uid="uid://cam4427sntweo" path="res://Assets/fonts/PixelOperator8.ttf" id="3_yov4r"]
 [ext_resource type="PackedScene" uid="uid://cdwwt4fw7surs" path="res://Scenes/next_level_object.tscn" id="4_dm3ur"]
 
 [node name="Level_0" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_tg8uc")
 
 [node name="Player" parent="." instance=ExtResource("1_2aad8")]
 position = Vector2(10, 0)

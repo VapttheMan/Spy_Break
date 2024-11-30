@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://ftmlkvqyk1kl"]
+[gd_scene load_steps=10 format=3 uid="uid://ftmlkvqyk1kl"]
 
 [ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="1_hd5so"]
+[ext_resource type="Script" path="res://Scenes/Levels/level_setup.gd" id="1_qfip6"]
 [ext_resource type="PackedScene" uid="uid://b4jhjuk68nvxn" path="res://Scenes/player.tscn" id="2_fq1l0"]
 [ext_resource type="PackedScene" uid="uid://b0ae2651xi2nu" path="res://Scenes/gun_table.tscn" id="3_g33r2"]
 [ext_resource type="PackedScene" uid="uid://b4w0tr3w10ppd" path="res://Scenes/computer.tscn" id="4_rf12n"]
@@ -11,6 +12,7 @@
 
 [node name="Level_9" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_qfip6")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

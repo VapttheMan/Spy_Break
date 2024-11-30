@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cblycos0n1jq8"]
+[gd_scene load_steps=11 format=3 uid="uid://cblycos0n1jq8"]
 
 [ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="1_8ofkc"]
+[ext_resource type="Script" path="res://Scenes/Levels/level_setup.gd" id="1_f4sh3"]
 [ext_resource type="PackedScene" uid="uid://b4jhjuk68nvxn" path="res://Scenes/player.tscn" id="2_b1seb"]
 [ext_resource type="PackedScene" uid="uid://b0ae2651xi2nu" path="res://Scenes/gun_table.tscn" id="3_ag6ro"]
 [ext_resource type="PackedScene" uid="uid://ch37ai5i4wte7" path="res://Scenes/enemy.tscn" id="4_3hcir"]
@@ -17,6 +18,7 @@ point_count = 2
 
 [node name="Level_5" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_f4sh3")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

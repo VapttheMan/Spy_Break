@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://t4ip6w1a2p78"]
+
+[ext_resource type="AudioStream" uid="uid://om6akv1qleh6" path="res://Assets/spy_showdownMP3.mp3" id="1_qjuk5"]
+[ext_resource type="Script" path="res://Scripts/main_audio.gd" id="2_77pia"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_qjuk5")
+autoplay = true
+script = ExtResource("2_77pia")

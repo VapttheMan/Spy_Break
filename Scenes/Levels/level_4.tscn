@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://mnjbf1boywsf"]
+[gd_scene load_steps=14 format=3 uid="uid://mnjbf1boywsf"]
 
+[ext_resource type="Script" path="res://Scenes/Levels/level_setup.gd" id="1_32nnf"]
 [ext_resource type="PackedScene" uid="uid://b4jhjuk68nvxn" path="res://Scenes/player.tscn" id="1_rmeqv"]
 [ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="2_7r6kt"]
 [ext_resource type="PackedScene" uid="uid://blay4sa3ofs84" path="res://Scenes/door.tscn" id="3_udfxx"]
@@ -45,6 +46,7 @@ point_count = 2
 
 [node name="Level_4" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_32nnf")
 
 [node name="Player" parent="." instance=ExtResource("1_rmeqv")]
 position = Vector2(-186, 26)
