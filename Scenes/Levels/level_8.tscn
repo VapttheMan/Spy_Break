@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfm7y0iga5mb4"]
+
+[ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="1_r4dga"]
+
+[node name="Level_8" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("1_r4dga")
+format = 2
+layer_0/name = "Ground"
+layer_0/z_index = -1
+layer_1/name = "Ground Object"
+layer_1/y_sort_enabled = true
+layer_2/name = "Air Object"
+layer_2/z_index = 10
