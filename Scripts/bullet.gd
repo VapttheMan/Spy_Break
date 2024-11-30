@@ -18,4 +18,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		body.die()
 		queue_free()
+	if body.name != "Player":
+		queue_free()
 	

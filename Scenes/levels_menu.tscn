@@ -116,6 +116,16 @@ theme_override_fonts/font = ExtResource("3_i5q71")
 theme_override_font_sizes/font_size = 48
 text = "Level 9"
 
+[node name="Return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 29.0
+offset_right = 231.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("3_i5q71")
+theme_override_font_sizes/font_size = 32
+text = "Return"
+
 [connection signal="pressed" from="TextureRect/GridContainer/Level 0" to="." method="_on_level_0_pressed"]
 [connection signal="pressed" from="TextureRect/GridContainer/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="TextureRect/GridContainer/Level 2" to="." method="_on_level_2_pressed"]
@@ -126,3 +136,4 @@ text = "Level 9"
 [connection signal="pressed" from="TextureRect/GridContainer/Level 7" to="." method="_on_level_7_pressed"]
 [connection signal="pressed" from="TextureRect/GridContainer/Level 8" to="." method="_on_level_8_pressed"]
 [connection signal="pressed" from="TextureRect/GridContainer/Level 9" to="." method="_on_level_9_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

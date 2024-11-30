@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdwag4ixfkhxe"]
+[gd_scene load_steps=5 format=3 uid="uid://cdwag4ixfkhxe"]
 
 [ext_resource type="Texture2D" uid="uid://b22u21o23jdy8" path="res://Scenes/main_menu_texture.tres" id="1_7ns52"]
+[ext_resource type="Script" path="res://Scenes/credits.gd" id="1_nn2x7"]
 [ext_resource type="FontFile" uid="uid://cam4427sntweo" path="res://Assets/fonts/PixelOperator8.ttf" id="2_2qbgy"]
 [ext_resource type="FontFile" uid="uid://cnljrs73u3u8k" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="3_re71s"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nn2x7")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -62,3 +64,15 @@ text = "
 Credits"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Return" type="Button" parent="."]
+layout_mode = 1
+offset_left = 21.0
+offset_top = 19.0
+offset_right = 123.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("3_re71s")
+theme_override_font_sizes/font_size = 16
+text = "Return"
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
