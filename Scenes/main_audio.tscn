@@ -6,4 +6,5 @@
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_qjuk5")
 autoplay = true
+parameters/looping = true
 script = ExtResource("2_77pia")

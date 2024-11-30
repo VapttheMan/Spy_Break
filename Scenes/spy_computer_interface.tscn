@@ -98,7 +98,7 @@ theme_override_colors/font_shadow_color = Color(0.210507, 0.210507, 0.210507, 1)
 theme_override_fonts/font = ExtResource("1_t0ohs")
 theme_override_font_sizes/font_size = 24
 text = "Complete the Code
-Press Enter when complete
+
 Press Esc to leave"
 horizontal_alignment = 1
 
