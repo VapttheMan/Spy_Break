@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi5mucmua830w"]
+
+[ext_resource type="FontFile" uid="uid://cnljrs73u3u8k" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_vety6"]
+
+[sub_resource type="Gradient" id="Gradient_2tjyp"]
+colors = PackedColorArray(0.0361009, 0.0361009, 0.0361009, 1, 4.15128e-07, 0.22149, 0.011297, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bby12"]
+gradient = SubResource("Gradient_2tjyp")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_bby12")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -272.0
+offset_right = 272.0
+offset_bottom = 64.0
+grow_horizontal = 2
+scale = Vector2(1.02657, 1.13284)
+theme_override_fonts/font = ExtResource("1_vety6")
+theme_override_font_sizes/font_size = 64
+text = "
+Spy Break"
+vertical_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -69.0
+offset_right = 240.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Button" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vety6")
+theme_override_font_sizes/font_size = 48
+text = "Play"
+
+[node name="Button2" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vety6")
+theme_override_font_sizes/font_size = 48
+text = "Levels"
+
+[node name="Button3" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vety6")
+theme_override_font_sizes/font_size = 48
+text = "Credits"

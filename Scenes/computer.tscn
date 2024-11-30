@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://b4w0tr3w10ppd"]
+
+[ext_resource type="Texture2D" uid="uid://c6j0k54yo3f35" path="res://Assets/Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="1_71shr"]
+[ext_resource type="Script" path="res://Scripts/computer.gd" id="1_df3c3"]
+[ext_resource type="PackedScene" uid="uid://6x3ektj8qj0w" path="res://Scenes/spy_computer_interface.tscn" id="3_yngjf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0a4b6"]
+atlas = ExtResource("1_71shr")
+region = Rect2(48, 135, 16, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qia0r"]
+atlas = ExtResource("1_71shr")
+region = Rect2(48, 54, 16, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh0fx"]
+atlas = ExtResource("1_71shr")
+region = Rect2(208, 54, 16, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1mnqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0a4b6")
+}],
+"loop": true,
+"name": &"computer1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qia0r")
+}],
+"loop": true,
+"name": &"computer2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh0fx")
+}],
+"loop": true,
+"name": &"computer3",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qi1ud"]
+radius = 16.0312
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17gye"]
+size = Vector2(16, 13)
+
+[node name="Computer" type="Node2D" groups=["computer", "player"]]
+y_sort_enabled = true
+script = ExtResource("1_df3c3")
+
+[node name="Computer_Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -6.5)
+sprite_frames = SubResource("SpriteFrames_1mnqw")
+animation = &"computer2"
+
+[node name="Interact_Area" type="Area2D" parent="."]
+position = Vector2(0, -6.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_Area"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_qi1ud")
+
+[node name="Static_Computer" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -6.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Static_Computer"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_17gye")
+
+[node name="Spy_Computer_Interface" parent="." instance=ExtResource("3_yngjf")]
+
+[connection signal="body_entered" from="Interact_Area" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Interact_Area" to="." method="_on_interact_area_body_exited"]

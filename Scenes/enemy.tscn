@@ -1,0 +1,937 @@
+[gd_scene load_steps=175 format=3 uid="uid://ch37ai5i4wte7"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_sg0md"]
+[ext_resource type="Texture2D" uid="uid://dt0o0t0xc4hv0" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_idle_0.png" id="1_wkhai"]
+[ext_resource type="Texture2D" uid="uid://cwdvqfjnuicbu" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_idle_1.png" id="2_dirrv"]
+[ext_resource type="Texture2D" uid="uid://b511iifily4qg" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_attack-reload_ (1).png" id="2_p6en3"]
+[ext_resource type="Texture2D" uid="uid://clypyae14p7aq" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_attack-reload_ (2).png" id="3_2tpja"]
+[ext_resource type="Texture2D" uid="uid://s4gy5d1a1t0s" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_idle_2.png" id="3_6jdv8"]
+[ext_resource type="Texture2D" uid="uid://beht14ydk03s0" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_idle_3.png" id="4_ekj8l"]
+[ext_resource type="Texture2D" uid="uid://dckmp6mkfdygd" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_attack-reload_ (3).png" id="4_f3l8o"]
+[ext_resource type="Texture2D" uid="uid://ce5hi6bjc6vg3" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_attack-reload_ (4).png" id="5_0dbg3"]
+[ext_resource type="Texture2D" uid="uid://csdi6hvmhw2hd" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_idle_4.png" id="5_jbciu"]
+[ext_resource type="Texture2D" uid="uid://djbgdh4dajy82" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_attack-reload_ (5).png" id="6_a7ec2"]
+[ext_resource type="Texture2D" uid="uid://wnq1qjst1hwk" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_run_0.png" id="6_chpmn"]
+[ext_resource type="Texture2D" uid="uid://bj7ircbjgtmqx" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_attack-reload_ (6).png" id="7_1mw1f"]
+[ext_resource type="Texture2D" uid="uid://carmpjmtck2g7" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_run_1.png" id="7_1vt5g"]
+[ext_resource type="Texture2D" uid="uid://buk3b4e7qr3bm" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_attack-reload_ (1).png" id="8_8b8dk"]
+[ext_resource type="Texture2D" uid="uid://cuyu1ckvqj062" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_run_2.png" id="8_55y6d"]
+[ext_resource type="Texture2D" uid="uid://d4dv2e8eqhwle" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_run_3.png" id="9_2teyy"]
+[ext_resource type="Texture2D" uid="uid://csad6wdd7owrg" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_attack-reload_ (2).png" id="9_rv8do"]
+[ext_resource type="Texture2D" uid="uid://b3fto0smr0ja8" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_attack-reload_ (3).png" id="10_655ci"]
+[ext_resource type="Texture2D" uid="uid://bgibc48ua4eth" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_run_4.png" id="10_s0dwg"]
+[ext_resource type="Texture2D" uid="uid://b6xvsvep44sps" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_run_5.png" id="11_b02hn"]
+[ext_resource type="Texture2D" uid="uid://b8yg82dtwm5xu" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_attack-reload_ (4).png" id="11_xd7c5"]
+[ext_resource type="Texture2D" uid="uid://c0smnvs6ea6qo" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_run_6.png" id="12_kvnmo"]
+[ext_resource type="Texture2D" uid="uid://cxeulnd1ed0kk" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_attack-reload_ (5).png" id="12_wen2d"]
+[ext_resource type="Texture2D" uid="uid://cv16btvr6m43k" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_attack-reload_ (6).png" id="13_0lh56"]
+[ext_resource type="Texture2D" uid="uid://cajy4jdqq174r" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_run_7.png" id="13_4rr8m"]
+[ext_resource type="Texture2D" uid="uid://cc73uokuphao6" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_attack-reload_ (1).png" id="14_cuqe6"]
+[ext_resource type="Texture2D" uid="uid://cs08tjpl2tih3" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_idle_0.png" id="14_lvdpp"]
+[ext_resource type="Texture2D" uid="uid://qdh0o847u740" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_attack-reload_ (2).png" id="15_28xqa"]
+[ext_resource type="Texture2D" uid="uid://fd7i7o2ritkg" path="res://Assets/Gangster Characters Pack by RgsDev/Weapon 1/Weapon 1_shoot_0.png" id="15_juhda"]
+[ext_resource type="Texture2D" uid="uid://3w8d0eq7nne3" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_idle_1.png" id="15_rm1vn"]
+[ext_resource type="Texture2D" uid="uid://bdackej8t5ub7" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_idle_2.png" id="16_lsxmt"]
+[ext_resource type="Texture2D" uid="uid://0s3jb3nsv7tq" path="res://Assets/Gangster Characters Pack by RgsDev/Weapon 1/Weapon 1_shoot_1.png" id="16_sh38f"]
+[ext_resource type="Texture2D" uid="uid://bqrx3tje367fr" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_attack-reload_ (3).png" id="16_tm848"]
+[ext_resource type="Texture2D" uid="uid://c6sa7aecmwyq7" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_idle_3.png" id="17_8sfng"]
+[ext_resource type="Texture2D" uid="uid://bxo75bkidju7h" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_attack-reload_ (4).png" id="17_wdcnh"]
+[ext_resource type="Texture2D" uid="uid://c568crwv3k3lq" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_attack-reload_ (5).png" id="18_6yet3"]
+[ext_resource type="Texture2D" uid="uid://bfsi862eesgj1" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_idle_4.png" id="18_mveh5"]
+[ext_resource type="Texture2D" uid="uid://7n0dpc0xfli2" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_run_0.png" id="19_hgy75"]
+[ext_resource type="Texture2D" uid="uid://lh7t8du0ri4k" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_attack-reload_ (6).png" id="19_irpv4"]
+[ext_resource type="Texture2D" uid="uid://hxisxipvrs5u" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_run_1.png" id="20_4a3vv"]
+[ext_resource type="Texture2D" uid="uid://be8yyj4pi3so0" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_attack-reload_ (1).png" id="20_wasu1"]
+[ext_resource type="Texture2D" uid="uid://dsf01tng1n7j" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_run_2.png" id="21_8vyxw"]
+[ext_resource type="Texture2D" uid="uid://0j5fwsch1on1" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_attack-reload_ (2).png" id="21_l7by7"]
+[ext_resource type="Texture2D" uid="uid://bwgdiqag7xf1y" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_attack-reload_ (3).png" id="22_2s608"]
+[ext_resource type="Texture2D" uid="uid://w7xhecauovlp" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_run_3.png" id="22_dsegt"]
+[ext_resource type="Texture2D" uid="uid://dp7nbvwulvbcn" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_run_4.png" id="23_ghkn1"]
+[ext_resource type="Texture2D" uid="uid://bqa5lawfkqn58" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_attack-reload_ (4).png" id="23_onhlj"]
+[ext_resource type="Texture2D" uid="uid://bx1oiduaiukc3" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_run_5.png" id="24_coira"]
+[ext_resource type="Texture2D" uid="uid://cgns0xh1rju34" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_attack-reload_ (5).png" id="24_dad7v"]
+[ext_resource type="Texture2D" uid="uid://fa67mf31p7" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_run_6.png" id="25_7t3bt"]
+[ext_resource type="Texture2D" uid="uid://vvkbakd6h6f1" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_attack-reload_ (6).png" id="25_pymrl"]
+[ext_resource type="Texture2D" uid="uid://drvn7g3kd2n6k" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_run_7.png" id="26_2dri3"]
+[ext_resource type="Texture2D" uid="uid://bxi3hd6ryjqfy" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_dead_0.png" id="26_w1iwc"]
+[ext_resource type="Texture2D" uid="uid://ln1efbjfb4cj" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_dead_1.png" id="27_bv5p0"]
+[ext_resource type="Texture2D" uid="uid://1ws2mwcas4pe" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_idle_0.png" id="27_ura7l"]
+[ext_resource type="Texture2D" uid="uid://dmhcwnivsy40g" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_idle_1.png" id="28_ounpe"]
+[ext_resource type="Texture2D" uid="uid://csjmrmfia8fij" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_dead_2.png" id="28_pfuer"]
+[ext_resource type="Texture2D" uid="uid://db40exqbrn7a4" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_dead_3.png" id="29_qfv2x"]
+[ext_resource type="Texture2D" uid="uid://ds0swhh1u15u" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_idle_2.png" id="29_sh0js"]
+[ext_resource type="Texture2D" uid="uid://n7hb53x7olky" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_idle_3.png" id="30_2kjsb"]
+[ext_resource type="Texture2D" uid="uid://cgdb7xck4dpsn" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_dead_4.png" id="30_orqda"]
+[ext_resource type="Texture2D" uid="uid://brqkr1idoj5d4" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_idle_4.png" id="31_7wepy"]
+[ext_resource type="Texture2D" uid="uid://s1snpxck815r" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_dead_5.png" id="31_weqto"]
+[ext_resource type="Texture2D" uid="uid://bkhkt6mop8kyo" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_dead_6.png" id="32_er8o3"]
+[ext_resource type="Texture2D" uid="uid://dbc3ycoshs7f0" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_run_0.png" id="32_ypt3x"]
+[ext_resource type="Texture2D" uid="uid://efffo62ctoeg" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_dead_7.png" id="33_4um2q"]
+[ext_resource type="Texture2D" uid="uid://dk6wo2mx22w17" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_run_1.png" id="33_vngph"]
+[ext_resource type="Texture2D" uid="uid://bgdj0axep351k" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_run_2.png" id="34_5s02s"]
+[ext_resource type="Texture2D" uid="uid://btpwt7m6fgq2d" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_dead_0.png" id="34_oex3o"]
+[ext_resource type="Texture2D" uid="uid://ci3tuis0sttwe" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_run_3.png" id="35_erwmq"]
+[ext_resource type="Texture2D" uid="uid://8o0usgkspdh7" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_dead_1.png" id="35_hjonw"]
+[ext_resource type="Texture2D" uid="uid://ixtkytewvplf" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_attack_0.png" id="36_j85o1"]
+[ext_resource type="Texture2D" uid="uid://bpla5sqgelr8a" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_run_4.png" id="36_lbaaf"]
+[ext_resource type="Texture2D" uid="uid://cpd57nmqe1uu8" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_dead_2.png" id="36_yq27a"]
+[ext_resource type="Texture2D" uid="uid://cioeavt01ca2t" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_run_5.png" id="37_6a282"]
+[ext_resource type="Texture2D" uid="uid://bxx78fm4t0eyl" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_dead_3.png" id="37_8bnce"]
+[ext_resource type="Texture2D" uid="uid://bgyrsifvysxmb" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_attack_1.png" id="37_cl4ti"]
+[ext_resource type="Texture2D" uid="uid://d8dt7w8jqgta" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_run_6.png" id="38_4rexh"]
+[ext_resource type="Texture2D" uid="uid://btnginreq4wfc" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_dead_4.png" id="38_lofus"]
+[ext_resource type="Texture2D" uid="uid://bwd2af08a44k7" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_attack_2.png" id="38_p0joq"]
+[ext_resource type="Texture2D" uid="uid://b03ke603meri6" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_attack_3.png" id="39_8lvvf"]
+[ext_resource type="Texture2D" uid="uid://ox5wqrfslcoh" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_dead_5.png" id="39_jptjb"]
+[ext_resource type="Texture2D" uid="uid://bunu12vn4s2b7" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_run_7.png" id="39_ujctk"]
+[ext_resource type="Texture2D" uid="uid://sxge110yrmwi" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_attack_4.png" id="40_d5oyu"]
+[ext_resource type="Texture2D" uid="uid://cnmxk4ruogqbn" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_dead_6.png" id="40_r62yc"]
+[ext_resource type="Texture2D" uid="uid://cjknr1rbh58nb" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_dead_7.png" id="41_53hvy"]
+[ext_resource type="Texture2D" uid="uid://cj0r8q27kt1ue" path="res://Assets/moderninteriors-win/4_User_Interface_Elements/UI_thinking_emotes_animation_16x16.png" id="41_435f3"]
+[ext_resource type="Texture2D" uid="uid://cdvjdy0bg0f75" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_attack_5.png" id="41_p0lws"]
+[ext_resource type="PackedScene" uid="uid://dtra4737fs1g5" path="res://Scenes/enemy_sight.tscn" id="42_7vduj"]
+[ext_resource type="Texture2D" uid="uid://bdotj1ohddxv8" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_dead_0.png" id="42_l3llr"]
+[ext_resource type="Texture2D" uid="uid://bhwfhjfrluhxt" path="res://Assets/pixil-frame-0.png" id="43_5uq6n"]
+[ext_resource type="Texture2D" uid="uid://l7ud7lah3dht" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_dead_1.png" id="43_h7otl"]
+[ext_resource type="Texture2D" uid="uid://bs575j8li7bhe" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_dead_2.png" id="44_8am3u"]
+[ext_resource type="Texture2D" uid="uid://cfmf8je41rt6n" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_dead_3.png" id="45_a7gl4"]
+[ext_resource type="Texture2D" uid="uid://c4ybv6ko5ohs3" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_dead_4.png" id="46_548t0"]
+[ext_resource type="Texture2D" uid="uid://b74ottjvppq2c" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_dead_5.png" id="47_b1lyv"]
+[ext_resource type="Texture2D" uid="uid://ca0vfswhncpn8" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_dead_6.png" id="48_423hs"]
+[ext_resource type="Texture2D" uid="uid://cwlj716xxpjdk" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_dead_7.png" id="49_cedo0"]
+[ext_resource type="Texture2D" uid="uid://c5c343fhl5b5n" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_dead_0.png" id="50_il5kx"]
+[ext_resource type="Texture2D" uid="uid://bujq51qlx1m8k" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_dead_1.png" id="51_beqwy"]
+[ext_resource type="Texture2D" uid="uid://dl551ig2wrqe6" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_dead_2.png" id="52_80lcw"]
+[ext_resource type="Texture2D" uid="uid://3hm73t4fa776" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_dead_3.png" id="53_8cu7k"]
+[ext_resource type="Texture2D" uid="uid://3aaxpswn1njx" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_dead_4.png" id="54_m4td5"]
+[ext_resource type="Texture2D" uid="uid://bex20fj7ogt35" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_dead_5.png" id="55_84lpo"]
+[ext_resource type="Texture2D" uid="uid://ctlndyawapjhg" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_dead_6.png" id="56_mu8n0"]
+[ext_resource type="Texture2D" uid="uid://bvjtud1e3v3fa" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_dead_7.png" id="57_xfdff"]
+[ext_resource type="Texture2D" uid="uid://60qmrui6nu5v" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_idle_0.png" id="63_bd1vc"]
+[ext_resource type="Texture2D" uid="uid://cspsdgh7n1810" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_idle_1.png" id="64_4cns3"]
+[ext_resource type="Texture2D" uid="uid://do1ym8kn2xybw" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_idle_2.png" id="65_hgit6"]
+[ext_resource type="Texture2D" uid="uid://bulkw0mh3vvgk" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_idle_3.png" id="66_s2avr"]
+[ext_resource type="Texture2D" uid="uid://coyl1ohmvsxd" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_idle_4.png" id="67_xdjah"]
+[ext_resource type="Texture2D" uid="uid://cb5et186vd62k" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_idle_0.png" id="68_p232q"]
+[ext_resource type="Texture2D" uid="uid://blr7gr40ssokq" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_idle_1.png" id="69_belr1"]
+[ext_resource type="Texture2D" uid="uid://cep43qyr6bcn3" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_idle_2.png" id="70_yenc8"]
+[ext_resource type="Texture2D" uid="uid://c5jx7ooxdgswm" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_idle_3.png" id="71_s4pyu"]
+[ext_resource type="Texture2D" uid="uid://bjlhtny5abnf3" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_idle_4.png" id="72_6lm77"]
+[ext_resource type="Texture2D" uid="uid://cyulob6e4kdul" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_idle_0.png" id="73_6mc2q"]
+[ext_resource type="Texture2D" uid="uid://dgrqyum44ir7f" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_idle_1.png" id="74_a6850"]
+[ext_resource type="Texture2D" uid="uid://f357qmolvl4k" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_idle_2.png" id="75_htk5l"]
+[ext_resource type="Texture2D" uid="uid://dqkyf6ii63mr" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_idle_3.png" id="76_htumc"]
+[ext_resource type="Texture2D" uid="uid://3ukrrv18fiaa" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_idle_4.png" id="77_anvp5"]
+[ext_resource type="Texture2D" uid="uid://c3n76mwqbv036" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_run_0.png" id="86_mu1tg"]
+[ext_resource type="Texture2D" uid="uid://crarrhlpeb20d" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_run_1.png" id="87_tb6hu"]
+[ext_resource type="Texture2D" uid="uid://bnxvivfeh65n8" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_run_2.png" id="88_xvt4c"]
+[ext_resource type="Texture2D" uid="uid://cvfi1jp3yf8rc" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_run_3.png" id="89_qqx3n"]
+[ext_resource type="Texture2D" uid="uid://hf3e1ekg2wy5" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_run_4.png" id="90_k5qmt"]
+[ext_resource type="Texture2D" uid="uid://dh65naaiawoao" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_run_5.png" id="91_ti3hq"]
+[ext_resource type="Texture2D" uid="uid://dhdvwfgw51nyo" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_run_6.png" id="92_grvf0"]
+[ext_resource type="Texture2D" uid="uid://ckth035ram5yc" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 2/Gangster 2_run_7.png" id="93_44h8e"]
+[ext_resource type="Texture2D" uid="uid://87v2bngng6d6" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_0.png" id="94_cwtc0"]
+[ext_resource type="Texture2D" uid="uid://dkul23urt0c5c" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_1.png" id="95_3vnkj"]
+[ext_resource type="Texture2D" uid="uid://cvjlu61gauhqm" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_2.png" id="96_5cp4k"]
+[ext_resource type="Texture2D" uid="uid://dd24754uyhr4o" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_3.png" id="97_cubob"]
+[ext_resource type="Texture2D" uid="uid://bowjhbxc8ntwx" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_4.png" id="98_i7jtg"]
+[ext_resource type="Texture2D" uid="uid://di3f3j12rvk6d" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_5.png" id="99_6ei8e"]
+[ext_resource type="Texture2D" uid="uid://thd60mwsw4yx" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_6.png" id="100_yxju7"]
+[ext_resource type="Texture2D" uid="uid://bm7a2kyb72rnf" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_7.png" id="101_dmt7t"]
+[ext_resource type="Texture2D" uid="uid://cwn3038y8gasj" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_0.png" id="104_yyiky"]
+[ext_resource type="Texture2D" uid="uid://dy0qf1420h0m3" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_1.png" id="105_img73"]
+[ext_resource type="Texture2D" uid="uid://bllph5g7mxqay" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_2.png" id="106_ubod1"]
+[ext_resource type="Texture2D" uid="uid://by5jayjvv27x8" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_3.png" id="107_4acs2"]
+[ext_resource type="Texture2D" uid="uid://bnis2y2kqe8w4" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_4.png" id="108_n6bkc"]
+[ext_resource type="Texture2D" uid="uid://d20ct5j2j6r6q" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_5.png" id="109_x8a7r"]
+[ext_resource type="Texture2D" uid="uid://blmkncbvcg565" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_6.png" id="110_jwgim"]
+[ext_resource type="Texture2D" uid="uid://1pawyllyidqc" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_7.png" id="111_rfwk6"]
+[ext_resource type="Texture2D" uid="uid://xbkkeufkla2o" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_dead_0.png" id="131_o5jfl"]
+[ext_resource type="Texture2D" uid="uid://coprujdlox7hq" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_dead_1.png" id="132_3neyf"]
+[ext_resource type="Texture2D" uid="uid://dyrbn083r3c55" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_dead_2.png" id="133_cw83v"]
+[ext_resource type="Texture2D" uid="uid://cx17ccyiw7h3p" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_dead_3.png" id="134_6hj25"]
+[ext_resource type="Texture2D" uid="uid://ctddjrlbtay86" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_dead_4.png" id="135_vokrw"]
+[ext_resource type="Texture2D" uid="uid://tadxkpho6tm5" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_dead_5.png" id="136_5igtu"]
+[ext_resource type="Texture2D" uid="uid://b86lka0fdtayn" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_dead_6.png" id="137_xt3eo"]
+[ext_resource type="Texture2D" uid="uid://dj4nqknoivnwy" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Right Hand/Right Hand_dead_7.png" id="138_0n8sc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fx1yk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p6en3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2tpja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f3l8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0dbg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a7ec2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1mw1f")
+}],
+"loop": true,
+"name": &"Attack1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8b8dk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rv8do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_655ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xd7c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wen2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0lh56")
+}],
+"loop": true,
+"name": &"Attack2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_cuqe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_28xqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tm848")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wdcnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6yet3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_irpv4")
+}],
+"loop": true,
+"name": &"Attack3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_wasu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_l7by7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_2s608")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_onhlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dad7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_pymrl")
+}],
+"loop": true,
+"name": &"Attack4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_w1iwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bv5p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pfuer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qfv2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_orqda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_weqto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_er8o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_4um2q")
+}],
+"loop": false,
+"name": &"Death1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_oex3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_hjonw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_yq27a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_8bnce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_lofus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_jptjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_r62yc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_53hvy")
+}],
+"loop": false,
+"name": &"Death2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_l3llr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_h7otl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_8am3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_a7gl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_548t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_b1lyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_423hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_cedo0")
+}],
+"loop": false,
+"name": &"Death3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_il5kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_beqwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_80lcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_8cu7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_m4td5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_84lpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_mu8n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_xfdff")
+}],
+"loop": false,
+"name": &"Death4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wkhai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dirrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6jdv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ekj8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jbciu")
+}],
+"loop": true,
+"name": &"Idle1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("63_bd1vc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_4cns3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_hgit6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_s2avr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_xdjah")
+}],
+"loop": true,
+"name": &"Idle2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_p232q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_belr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_yenc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_s4pyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_6lm77")
+}],
+"loop": true,
+"name": &"Idle3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("73_6mc2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_a6850")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_htk5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_htumc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_anvp5")
+}],
+"loop": true,
+"name": &"Idle4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_chpmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1vt5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_55y6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2teyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s0dwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b02hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kvnmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4rr8m")
+}],
+"loop": true,
+"name": &"Run1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("86_mu1tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_tb6hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_xvt4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_qqx3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_k5qmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_ti3hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_grvf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_44h8e")
+}],
+"loop": true,
+"name": &"Run2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("94_cwtc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_3vnkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_5cp4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_cubob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_i7jtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_6ei8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_yxju7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_dmt7t")
+}],
+"loop": true,
+"name": &"Run3",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Run4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkbsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_juhda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_sh38f")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("104_yyiky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_img73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_ubod1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_4acs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_n6bkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_x8a7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_jwgim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_rfwk6")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_lvdpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rm1vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lsxmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8sfng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mveh5")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_hgy75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4a3vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8vyxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dsegt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ghkn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_coira")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_7t3bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_2dri3")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0nppb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_j85o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_cl4ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_p0joq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_8lvvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_d5oyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_p0lws")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("131_o5jfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_3neyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_cw83v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_6hj25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_vokrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_5igtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_xt3eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_0n8sc")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_ura7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ounpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_sh0js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_2kjsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7wepy")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_ypt3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_vngph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_5s02s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_erwmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_lbaaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_6a282")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_4rexh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ujctk")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ff1tc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5uq6n")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ldhp"]
+atlas = ExtResource("41_435f3")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwe4i"]
+atlas = ExtResource("41_435f3")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7j8h"]
+atlas = ExtResource("41_435f3")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifscr"]
+atlas = ExtResource("41_435f3")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_012ye"]
+atlas = ExtResource("41_435f3")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3554"]
+atlas = ExtResource("41_435f3")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rroc"]
+atlas = ExtResource("41_435f3")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tyiy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ldhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwe4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7j8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifscr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_012ye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3554")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rroc")
+}],
+"loop": false,
+"name": &"Cloud",
+"speed": 50.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6n18"]
+atlas = ExtResource("41_435f3")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3vwt"]
+atlas = ExtResource("41_435f3")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anoje"]
+atlas = ExtResource("41_435f3")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nadus"]
+atlas = ExtResource("41_435f3")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16kh6"]
+atlas = ExtResource("41_435f3")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tquwe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ldhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ldhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6n18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3vwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anoje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nadus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16kh6")
+}],
+"loop": false,
+"name": &"Cloud",
+"speed": 50.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jsy5i"]
+radius = 3.0
+height = 14.0
+
+[sub_resource type="GDScript" id="GDScript_86qwj"]
+script/source = "extends CollisionPolygon2D
+
+\"\"\"
+class_name FacingCollisionShape
+
+@export var facing_left_position : Vector2
+@export var facing_right_position : Vector2
+\"\"\"
+"
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_sg0md")
+
+[node name="Timer" type="Timer" parent="." groups=["player"]]
+wait_time = 0.4
+one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -15)
+scale = Vector2(0.85, 0.85)
+sprite_frames = SubResource("SpriteFrames_fx1yk")
+animation = &"Attack1"
+
+[node name="Left Hands" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+scale = Vector2(0.85, 0.85)
+sprite_frames = SubResource("SpriteFrames_xkbsd")
+animation = &"Idle"
+
+[node name="Right Hand" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+scale = Vector2(0.85, 0.85)
+sprite_frames = SubResource("SpriteFrames_0nppb")
+animation = &"Death"
+
+[node name="Gun_Shot" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+position = Vector2(10.5882, 7.05882)
+scale = Vector2(0.604595, 0.604596)
+sprite_frames = SubResource("SpriteFrames_ff1tc")
+animation = &"Attack"
+
+[node name="Bottom Cloud" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -20)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_5tyiy")
+animation = &"Cloud"
+frame = 6
+frame_progress = 1.0
+
+[node name="Top Cloud" type="AnimatedSprite2D" parent="Bottom Cloud"]
+visible = false
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_tquwe")
+animation = &"Cloud"
+frame = 6
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_jsy5i")
+
+[node name="Sight" parent="." instance=ExtResource("42_7vduj")]
+position = Vector2(2, -3)
+
+[node name="Enemy_vision" type="CollisionPolygon2D" parent="Sight"]
+polygon = PackedVector2Array(0, -7, 8, -21, 39, -21, 39, 8, 8, 8)
+script = SubResource("GDScript_86qwj")
+
+[node name="Enemy_wall_vision" type="RayCast2D" parent="Sight"]
+position = Vector2(0, -7)
+target_position = Vector2(38, 0)
+collision_mask = 3
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
