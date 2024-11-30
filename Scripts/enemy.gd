@@ -54,7 +54,7 @@ func start_attack_sequence():
 		return
 	
 	all_anim("Idle")
-	await get_tree().create_timer(1).timeout #Duration of Time for Player Detection
+	await get_tree().create_timer(0.3).timeout #Duration of Time for Player Detection
 	if not can_move:
 		all_anim("Attack")
 		$AnimatedSprite2D/Gun_Shot.play("Attack")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://pjrcsvqryajh"]
+[gd_scene load_steps=7 format=3 uid="uid://cebd1hnr55yq4"]
 
-[ext_resource type="PackedScene" uid="uid://b4jhjuk68nvxn" path="res://Scenes/player.tscn" id="1_jgdkc"]
-[ext_resource type="PackedScene" uid="uid://ch37ai5i4wte7" path="res://Scenes/enemy.tscn" id="4_adab0"]
-[ext_resource type="FontFile" uid="uid://cam4427sntweo" path="res://Assets/fonts/PixelOperator8.ttf" id="5_hkcil"]
-[ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="6_16xa8"]
+[ext_resource type="PackedScene" uid="uid://b4jhjuk68nvxn" path="res://Scenes/player.tscn" id="1_fydxe"]
+[ext_resource type="PackedScene" uid="uid://ch37ai5i4wte7" path="res://Scenes/enemy.tscn" id="2_5f4u1"]
+[ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="3_0igcb"]
+[ext_resource type="FontFile" uid="uid://cam4427sntweo" path="res://Assets/fonts/PixelOperator8.ttf" id="4_2bt71"]
+[ext_resource type="PackedScene" uid="uid://cdwwt4fw7surs" path="res://Scenes/next_level_object.tscn" id="5_l51g5"]
 
 [sub_resource type="Curve2D" id="Curve2D_uhg67"]
 _data = {
@@ -11,11 +12,11 @@ _data = {
 }
 point_count = 3
 
-[node name="Level 1" type="Node2D"]
+[node name="Level_1" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(0, -1)
 
-[node name="Player" parent="." instance=ExtResource("1_jgdkc")]
+[node name="Player" parent="." instance=ExtResource("1_fydxe")]
 position = Vector2(-130, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -31,8 +32,8 @@ curve = SubResource("Curve2D_uhg67")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(0, -1)
 
-[node name="Enemy" parent="Path2D/PathFollow2D" instance=ExtResource("4_adab0")]
-skin_suffix = 2
+[node name="Enemy" parent="Path2D/PathFollow2D" instance=ExtResource("2_5f4u1")]
+skin_suffix = 4
 
 [node name="Path2D2" type="Path2D" parent="."]
 position = Vector2(-33, -22)
@@ -42,12 +43,12 @@ curve = SubResource("Curve2D_uhg67")
 position = Vector2(117.094, -1)
 progress = 116.82
 
-[node name="Enemy" parent="Path2D2/PathFollow2D" instance=ExtResource("4_adab0")]
+[node name="Enemy" parent="Path2D2/PathFollow2D" instance=ExtResource("2_5f4u1")]
 skin_suffix = 2
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
-tile_set = ExtResource("6_16xa8")
+tile_set = ExtResource("3_0igcb")
 format = 2
 layer_0/name = "Ground"
 layer_0/z_index = -1
@@ -65,8 +66,11 @@ offset_top = -15.0
 offset_right = -43.0
 offset_bottom = 15.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_hkcil")
+theme_override_fonts/font = ExtResource("4_2bt71")
 theme_override_font_sizes/font_size = 8
 text = "Avoid being seen by enemies"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Next Level Object" parent="." instance=ExtResource("5_l51g5")]
+position = Vector2(194, -4)

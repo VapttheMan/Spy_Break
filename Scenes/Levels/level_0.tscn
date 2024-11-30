@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0es6ldt7qwcx"]
+[gd_scene load_steps=5 format=3 uid="uid://0qb6k3k5vycq"]
 
-[ext_resource type="PackedScene" uid="uid://b4jhjuk68nvxn" path="res://Scenes/player.tscn" id="1_0lqkn"]
-[ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="2_6vh8h"]
-[ext_resource type="FontFile" uid="uid://cam4427sntweo" path="res://Assets/fonts/PixelOperator8.ttf" id="3_ghblp"]
+[ext_resource type="PackedScene" uid="uid://b4jhjuk68nvxn" path="res://Scenes/player.tscn" id="1_2aad8"]
+[ext_resource type="TileSet" uid="uid://cgxebbf8jg5bd" path="res://Scenes/tile_set_main.tres" id="2_rhy4q"]
+[ext_resource type="FontFile" uid="uid://cam4427sntweo" path="res://Assets/fonts/PixelOperator8.ttf" id="3_yov4r"]
+[ext_resource type="PackedScene" uid="uid://cdwwt4fw7surs" path="res://Scenes/next_level_object.tscn" id="4_dm3ur"]
 
 [node name="Level_0" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("1_0lqkn")]
+[node name="Player" parent="." instance=ExtResource("1_2aad8")]
 position = Vector2(10, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -16,7 +17,7 @@ position_smoothing_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
-tile_set = ExtResource("2_6vh8h")
+tile_set = ExtResource("2_rhy4q")
 format = 2
 layer_0/name = "Ground"
 layer_0/z_index = -1
@@ -34,7 +35,7 @@ offset_top = -38.0
 offset_right = 119.0
 offset_bottom = -19.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ghblp")
+theme_override_fonts/font = ExtResource("3_yov4r")
 theme_override_font_sizes/font_size = 8
 text = "Use WASD to move"
 horizontal_alignment = 1
@@ -46,7 +47,7 @@ offset_top = -48.0
 offset_right = 388.0
 offset_bottom = -18.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ghblp")
+theme_override_fonts/font = ExtResource("3_yov4r")
 theme_override_font_sizes/font_size = 8
 text = "Break in and find what they are hiding"
 horizontal_alignment = 1
@@ -58,9 +59,9 @@ offset_top = 33.0
 offset_right = 230.0
 offset_bottom = 44.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ghblp")
+theme_override_fonts/font = ExtResource("3_yov4r")
 theme_override_font_sizes/font_size = 8
-text = "F to Roll"
+text = "SPACE to Roll"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -70,8 +71,11 @@ offset_top = -48.0
 offset_right = 243.0
 offset_bottom = -37.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ghblp")
+theme_override_fonts/font = ExtResource("3_yov4r")
 theme_override_font_sizes/font_size = 8
 text = "R to Restart"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Next Level Object" parent="." instance=ExtResource("4_dm3ur")]
+position = Vector2(511, -3)

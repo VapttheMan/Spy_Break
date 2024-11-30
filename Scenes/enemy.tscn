@@ -1,4 +1,4 @@
-[gd_scene load_steps=175 format=3 uid="uid://ch37ai5i4wte7"]
+[gd_scene load_steps=183 format=3 uid="uid://ch37ai5i4wte7"]
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_sg0md"]
 [ext_resource type="Texture2D" uid="uid://dt0o0t0xc4hv0" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 1/Gangster 2_idle_0.png" id="1_wkhai"]
@@ -138,11 +138,19 @@
 [ext_resource type="Texture2D" uid="uid://di3f3j12rvk6d" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_5.png" id="99_6ei8e"]
 [ext_resource type="Texture2D" uid="uid://thd60mwsw4yx" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_6.png" id="100_yxju7"]
 [ext_resource type="Texture2D" uid="uid://bm7a2kyb72rnf" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 3/Gangster 3_run_7.png" id="101_dmt7t"]
+[ext_resource type="Texture2D" uid="uid://frsn05b1cgp3" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_run_0.png" id="102_7lutl"]
+[ext_resource type="Texture2D" uid="uid://cc6wxmfxqhqos" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_run_1.png" id="103_te5bm"]
+[ext_resource type="Texture2D" uid="uid://c82jlg5m214m" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_run_2.png" id="104_0lp50"]
 [ext_resource type="Texture2D" uid="uid://cwn3038y8gasj" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_0.png" id="104_yyiky"]
+[ext_resource type="Texture2D" uid="uid://cj0m36jbysuhq" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_run_3.png" id="105_7yq0x"]
 [ext_resource type="Texture2D" uid="uid://dy0qf1420h0m3" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_1.png" id="105_img73"]
+[ext_resource type="Texture2D" uid="uid://byfioqgp1xvqu" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_run_4.png" id="106_tpavl"]
 [ext_resource type="Texture2D" uid="uid://bllph5g7mxqay" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_2.png" id="106_ubod1"]
 [ext_resource type="Texture2D" uid="uid://by5jayjvv27x8" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_3.png" id="107_4acs2"]
+[ext_resource type="Texture2D" uid="uid://cob228krrq8kn" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_run_5.png" id="107_avc8h"]
+[ext_resource type="Texture2D" uid="uid://dixjyqiw2ok3f" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_run_6.png" id="108_46r2n"]
 [ext_resource type="Texture2D" uid="uid://bnis2y2kqe8w4" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_4.png" id="108_n6bkc"]
+[ext_resource type="Texture2D" uid="uid://dgpv3tk44k3fu" path="res://Assets/Gangster Characters Pack by RgsDev/Gangster 4/Gangster 4_run_7.png" id="109_8eq37"]
 [ext_resource type="Texture2D" uid="uid://d20ct5j2j6r6q" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_5.png" id="109_x8a7r"]
 [ext_resource type="Texture2D" uid="uid://blmkncbvcg565" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_6.png" id="110_jwgim"]
 [ext_resource type="Texture2D" uid="uid://1pawyllyidqc" path="res://Assets/Gangster Characters Pack by RgsDev/Empty Hands/Left Hand/Left Hand_dead_7.png" id="111_rfwk6"]
@@ -532,7 +540,31 @@ animations = [{
 "name": &"Run3",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("102_7lutl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_te5bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_0lp50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_7yq0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_tpavl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_avc8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_46r2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_8eq37")
+}],
 "loop": true,
 "name": &"Run4",
 "speed": 5.0
@@ -873,6 +905,7 @@ class_name FacingCollisionShape
 "
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+y_sort_enabled = true
 script = ExtResource("1_sg0md")
 
 [node name="Timer" type="Timer" parent="." groups=["player"]]
@@ -883,7 +916,7 @@ one_shot = true
 position = Vector2(1, -15)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_fx1yk")
-animation = &"Attack1"
+animation = &"Run4"
 
 [node name="Left Hands" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 scale = Vector2(0.85, 0.85)
@@ -903,6 +936,7 @@ animation = &"Attack"
 
 [node name="Bottom Cloud" type="AnimatedSprite2D" parent="."]
 visible = false
+z_index = 1
 position = Vector2(0, -20)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_5tyiy")
@@ -912,6 +946,7 @@ frame_progress = 1.0
 
 [node name="Top Cloud" type="AnimatedSprite2D" parent="Bottom Cloud"]
 visible = false
+z_index = 1
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_tquwe")
 animation = &"Cloud"
