@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdwag4ixfkhxe"]
 
 [ext_resource type="Texture2D" uid="uid://b22u21o23jdy8" path="res://Scenes/main_menu_texture.tres" id="1_7ns52"]
-[ext_resource type="Script" path="res://Scenes/credits.gd" id="1_nn2x7"]
+[ext_resource type="Script" path="res://Scripts/credits.gd" id="1_nn2x7"]
 [ext_resource type="FontFile" uid="uid://cam4427sntweo" path="res://Assets/fonts/PixelOperator8.ttf" id="2_2qbgy"]
 [ext_resource type="FontFile" uid="uid://cnljrs73u3u8k" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="3_re71s"]
 
@@ -30,10 +30,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -555.0
-offset_top = -137.5
-offset_right = 555.0
-offset_bottom = 137.5
+offset_left = -551.0
+offset_top = -152.0
+offset_right = 559.0
+offset_bottom = 277.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_2qbgy")
@@ -46,7 +46,12 @@ Pixel Art Effect - FX076 by NYKNCK
 2D Pixel Weapons by Digital Weapons
 Fire Pixel Bullet 16x16 by BDragon1727
 Stress Supporters (Play Testers): Lash, BertuhTheBeast, Shawn
-Actual Supporter (Level Idea Designers): David and Jumar"
+Actual Supporters (Level Idea Designers): David and Jumar
+
+
+
+And finally, 
+Developed by VapttheMan"
 autowrap_mode = 2
 
 [node name="Credits Title" type="Label" parent="."]

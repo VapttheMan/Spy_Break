@@ -90,6 +90,6 @@ curve = SubResource("Curve2D_evs45")
 position = Vector2(-8, 135)
 rotation = -1.5708
 
-[node name="Enemy" parent="Path2D/PathFollow2D" instance=ExtResource("4_3hcir")]
+[node name="Bertuh 2" parent="Path2D/PathFollow2D" instance=ExtResource("4_3hcir")]
 rotation = 1.5708
 skin_suffix = 4
