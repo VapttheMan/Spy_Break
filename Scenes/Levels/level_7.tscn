@@ -106,13 +106,11 @@ position = Vector2(-61, -14)
 door_type = 1
 
 [node name="Door2" parent="." instance=ExtResource("6_8yk8c")]
-y_sort_enabled = true
 position = Vector2(-168, 110)
 door_id = 2
 
 [node name="Door3" parent="." instance=ExtResource("6_8yk8c")]
-y_sort_enabled = true
-position = Vector2(-8, 399)
+position = Vector2(-8, 127)
 door_id = 3
 
 [node name="Part1_Top_Enemy" type="Path2D" parent="."]

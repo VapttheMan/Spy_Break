@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_7ns52")
 
-[node name="Label" type="Label" parent="."]
+[node name="Credits" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -45,11 +45,11 @@ SPY SHOWDOWN: A Free Suspenseful Music Loop by  Fablefly Music
 Pixel Art Effect - FX076 by NYKNCK
 2D Pixel Weapons by Digital Weapons
 Fire Pixel Bullet 16x16 by BDragon1727
-Stress Supporters (Play Testers): Lash, Jumar, BertuhTheBeast, Shawn
-Actual Supporter: David"
+Stress Supporters (Play Testers): Lash, BertuhTheBeast, Shawn
+Actual Supporter (Level Idea Designers): David and Jumar"
 autowrap_mode = 2
 
-[node name="Label2" type="Label" parent="."]
+[node name="Credits Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
