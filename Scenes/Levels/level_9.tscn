@@ -70,8 +70,8 @@ autowrap_mode = 2
 [node name="Bertuh" parent="." instance=ExtResource("7_qipdi")]
 position = Vector2(247, -2)
 scale = Vector2(-1, 1)
-on_node = false
 skin_suffix = 4
+on_node = false
 
 [node name="Label3" type="Label" parent="."]
 offset_left = 593.0

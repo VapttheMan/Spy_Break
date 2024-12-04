@@ -7,24 +7,22 @@ extends Area2D
 
 
 
-
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	los.enabled = true
+	los.enabled = true #Enable constant line of sight for enemies
 
 func _process(delta):
-	if player:
-		#var direction_to_player = (player.position - enemy.position).normalized()
+	if player: #Always point enemy sights as player
 		los.target_position = to_local(player.position - Vector2(0,-5)) # 
-		#print("Direction to Player: ", direction_to_player)
 		los.enabled = true
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player": #Detect player if in area and not being other collision
 		if los.is_colliding():
 			var collider = los.get_collider()
 			if collider.name == "Player":
-				enemy.set_can_move(false)
-				$"../Bottom Cloud".visible = true
+				enemy.set_can_move(false) #Stop enemy movement
+				$"../Bottom Cloud".visible = true #Enemy Animations
 				$"../Bottom Cloud/Top Cloud".visible = true
 				$"../Bottom Cloud".play('Cloud')
 				$"../Bottom Cloud/Top Cloud".play('Cloud')
@@ -32,8 +30,8 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		enemy.set_can_move(true)
-		$"../Bottom Cloud".stop()
+		enemy.set_can_move(true) #Continue enemy movement
+		$"../Bottom Cloud".stop()  #Enemy Animations
 		$"../Bottom Cloud/Top Cloud".stop()
 		$"../Bottom Cloud".visible = false
 		$"../Bottom Cloud/Top Cloud".visible = false

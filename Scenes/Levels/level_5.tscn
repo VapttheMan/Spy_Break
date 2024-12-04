@@ -46,8 +46,8 @@ position = Vector2(-88, 6)
 [node name="Bertuh" parent="." instance=ExtResource("4_3hcir")]
 position = Vector2(121, 15)
 scale = Vector2(-1, 1)
-on_node = false
 skin_suffix = 4
+on_node = false
 
 [node name="Computer" parent="." instance=ExtResource("5_ksn5j")]
 position = Vector2(184, 7)

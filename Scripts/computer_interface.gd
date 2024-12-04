@@ -12,44 +12,36 @@ signal door_open_signal(door_id)
 var text_check
 var random_chars = ""
 
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	visible = false
-	_generate_random_character()
+	visible = false #Hide computer interface
+	_generate_random_character() #Generate random string for each computer
 	random_char_label.clear()  # Clear the RichTextLabel's previous content
-	#random_char_label.add_text('[center]' + random_chars + '[/center]')  # Display the random string in the RichTextLabel
-	random_char_label.bbcode_text = "[center]" + random_chars + "[/center]"
+	random_char_label.bbcode_text = "[center]" + random_chars + "[/center]"  # Display the random string in the RichTextLabel
 
-func set_computer_id(computer) -> void:
-	computer_id = computer
-
-"""
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	#print(get_text(check_text))
-"""
-
-func _on_line_edit_text_changed(new_text: String) -> void:
-	text_check = new_text 
-	_check_text_match()
-
-func _generate_random_character():
-	var chars = "abcdefghijklmnopqrstuvwxyz0123456789" #ABCDEFGHIJKLMNOPQRSTUVWXYZ
+func _generate_random_character(): #Initialize 5 character string
+	var chars = "abcdefghijklmnopqrstuvwxyz0123456789" 
 	var special_chars = "?<>!@#"
 	random_chars = ""
 	
 	for i in range(4):
 		random_chars += chars[randi() % chars.length()]
-	random_chars += special_chars[randi() % special_chars.length()]
-	#random_chars = '[center]' + random_chars + '[/center]' 
-	
-func _check_text_match():
+	random_chars += special_chars[randi() % special_chars.length()] #Last character is a special character
+
+func set_computer_id(computer) -> void: #When completed signal appropriate door id
+	computer_id = computer
+
+func _on_line_edit_text_changed(new_text: String) -> void: #Check player text input
+	text_check = new_text 
+	_check_text_match()
+
+func _check_text_match(): #Check is player input correct string
 	if text_check == random_chars:
 		random_char_label.clear()  # Clear the RichTextLabel's previous content
-		random_char_label.bbcode_text = "[center][color=green]" + random_chars + "[/color][/center]"
+		random_char_label.bbcode_text = "[center][color=green]" + random_chars + "[/color][/center]" #Change to Green
 		await get_tree().create_timer(0.3).timeout
-		player.set_can_move(true)
-		visible = false
+		player.set_can_move(true) #Set Player to move
+		visible = false #Hide interface
 		
-		emit_signal("door_open_signal", computer_id)
+		emit_signal("door_open_signal", computer_id) #Send signals to doors
 	

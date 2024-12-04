@@ -5,16 +5,13 @@ extends Node2D
 
 var is_player_inside = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
 func _process(delta):
-	if is_player_inside: #Actions can only be done inside area
-		if Input.is_action_just_pressed("ui_accept"):
-			gun_item.visible = false
-			player.set_has_gun(true)
+	if is_player_inside: #Actions can only be done inside area if set true
+		if Input.is_action_just_pressed("ui_accept"): #If Press E
+			gun_item.visible = false #Give player gun
+			player.set_has_gun(true) #Change player animations and enable gun shooting
 
 func _on_interact_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		is_player_inside = true
+		is_player_inside = true #If player in area of interaction, set true

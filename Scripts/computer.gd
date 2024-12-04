@@ -6,19 +6,20 @@ extends Node2D
 var is_interface_open = false
 var is_player_inside = false
 
-@export var computer_id = 1
+@export var computer_id = 1 #Change Computer ID and Apprearances
 
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	interface.set_computer_id(computer_id)
-	$Computer_Sprite.play("computer" + str(computer_id))
+	interface.set_computer_id(computer_id) #Send computer id to interface
+	$Computer_Sprite.play("computer" + str(computer_id)) #Display appropriate computer based on computer_id
 
 func _process(delta):
 	if is_player_inside: #Actions can only be done inside area
-		if Input.is_action_just_pressed("ui_accept") and !is_interface_open:
+		if Input.is_action_just_pressed("ui_accept") and !is_interface_open: #Open Computer
 			interface.visible = true
 			player.set_can_move(false)
 			is_interface_open = true
-		elif Input.is_action_just_pressed("ui_cancel") and is_interface_open:
+		elif Input.is_action_just_pressed("ui_cancel") and is_interface_open: #Close Computer
 			interface.visible = false
 			player.set_can_move(true)
 			is_interface_open = false

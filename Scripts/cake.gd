@@ -5,8 +5,7 @@ extends Node2D
 @onready var player = get_tree().get_nodes_in_group("player")[0]
 
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void: #Return player to main menu
 	if body.name == "Player":
 		await get_tree().create_timer(9).timeout 
 		$AnimatedSprite2D.visible = false

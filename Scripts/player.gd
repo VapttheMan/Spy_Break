@@ -8,7 +8,7 @@ class_name Player
 @onready var timer_roll: Timer = $Roll_Timer
 
 
-#Player Ordering is set to 5
+#Player Ordering is set to z = 5
 
 const speed = 100.0
 const roll_speed_multiplier = 2
@@ -20,38 +20,40 @@ var has_gun = false
 var is_rolling = false
 var rolling_cooldown = false
 
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	$Player_Sprite.play("down_idle")
 
 func _physics_process(delta):
-	if not is_alive and not death_animation_played:
+	if not is_alive and not death_animation_played: #Death Animation Activated
 		$Player_Sprite.play("death")
 		death_animation_played = true
 		timer_death.start()
 	elif is_alive:
-		if is_rolling:
+		if is_rolling:     #Rolling Character Movement
 			perform_roll(delta)
 			#print("im am rolling")
-		elif can_move:
+		elif can_move:     #Normal Character Movement
 			player_movement(delta)
 	
-	if can_move and Input.is_action_just_pressed("ui_restart"):
+	if can_move and Input.is_action_just_pressed("ui_restart"): #Restart, press R
 		timer_death.start()
 	
-	if can_move and has_gun == true and Input.is_action_just_pressed("ui_roll"):
+	if can_move and has_gun == true and Input.is_action_just_pressed("ui_roll"): #Fire Bullet, Press F
 		fire_bullet()
 		
-	if Input.is_action_just_pressed("ui_select") and !is_rolling:
+	if Input.is_action_just_pressed("ui_select") and !is_rolling: #Roll, Press SPACE
 		start_roll()
 		#print("roll started")
-		
-func start_roll():
+
+#Roll Functions
+func start_roll(): #Start Roll animation and Roll duration
 	is_rolling = true
 	#rolling_cooldown = true
 	play_roll_animation()
 	timer_roll.start()
 	
-func play_roll_animation():
+func play_roll_animation(): #Roll Animation based on direction
 	var dir = current_dir
 	var anim = $Player_Sprite
 	var suffix = "_gun" if has_gun else ""
@@ -69,7 +71,7 @@ func play_roll_animation():
 			anim.play("up_roll" + suffix)
 		
 	
-func perform_roll(delta):
+func perform_roll(delta): #Roll Movement based on direction of last player position
 	match current_dir:
 		"right": 
 			velocity = Vector2.RIGHT * speed * roll_speed_multiplier 
@@ -82,10 +84,12 @@ func perform_roll(delta):
 	move_and_slide()
 	#print("i rolled")
 	
+func _on_roll_timer_timeout() -> void: #Roll duration timer
+	is_rolling = false
+	#rolling_cooldown = false
 
-	
-
-func fire_bullet():
+#Bullet / Shooting Function
+func fire_bullet(): #Initialize and Fire Bullet
 	var bullet = BulletScene.instantiate()
 	
 	bullet.position = global_position
@@ -104,7 +108,10 @@ func fire_bullet():
 	
 	get_parent().add_child(bullet)
 
-func player_movement(delta):
+func set_has_gun(gun: bool) -> void: #Detects if player picked up gun, see gun_table script for more
+	has_gun = gun
+
+func player_movement(delta): #Normal player movement
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
 		play_anim(1)
@@ -132,10 +139,10 @@ func player_movement(delta):
 		
 	move_and_slide()
 	
-func play_anim(movement):
+func play_anim(movement): #Normal player animation
 	var dir = current_dir
 	var anim = $Player_Sprite
-	var suffix = "_gun" if has_gun else ""
+	var suffix = "_gun" if has_gun else "" #If has gun, change animations
 	
 	if dir == "right":
 		anim.flip_h = true
@@ -162,19 +169,11 @@ func play_anim(movement):
 		elif movement == 0:
 			anim.play("up_idle" + suffix)
 		
-func set_is_alive(alive: bool) -> void:
+func set_is_alive(alive: bool) -> void: #Update is_alive
 	is_alive = alive
 	
-func set_can_move(move: bool) -> void:
+func set_can_move(move: bool) -> void: #Update can_move
 	can_move = move
-	
-func set_has_gun(gun: bool) -> void:
-	has_gun = gun
-	
-func _on_timer_timeout() -> void:
-	get_tree().reload_current_scene() # Replace with function body.
 
-
-func _on_roll_timer_timeout() -> void:
-	is_rolling = false
-	#rolling_cooldown = false
+func _on_timer_timeout() -> void: #Death
+	get_tree().reload_current_scene() 
